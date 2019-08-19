@@ -23,7 +23,7 @@ class Api {
         if ($response['status'] === 'success') {
             $result = $response['result'];
             if(isset($result['user_id']) && ($clientId = $result['user_id'])) {
-                Registry::getConfig()->saveShopConfVar('str', 'sRelevanzClientId', $clientId, null, 'module:releva.nz Tracking');
+                Registry::getConfig()->saveShopConfVar('str', 'sRelevanzClientId', $clientId, null, 'module:releva.nz-tracking');
             }
         } else {
             throw new \Exception($response['message']);

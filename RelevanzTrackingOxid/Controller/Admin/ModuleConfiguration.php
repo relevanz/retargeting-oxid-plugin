@@ -13,7 +13,7 @@ class ModuleConfiguration extends ModuleConfiguration_parent {
     public function saveConfVars()
     {
         $sModuleId = $this->getEditObjectId();
-        if ($sModuleId === 'releva.nz Tracking') {
+        if ($sModuleId === 'releva.nz-tracking') {
             $confStrs = $this->getConfig()->getRequestParameter('confstrs');
             try {
                 Registry::get(Api::class)->getUser($confStrs['sRelevanzApiKey']);

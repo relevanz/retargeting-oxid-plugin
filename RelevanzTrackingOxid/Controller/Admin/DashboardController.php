@@ -7,7 +7,7 @@ use Relevanz\TrackingOxid\Model\Api;
 class DashboardController extends \OxidEsales\Eshop\Application\Controller\Admin\AdminDetailsController
 {
     
-    protected $_sThisTemplate = 'main.tpl';
+    protected $_sThisTemplate = 'statistics.tpl';
     
     /**
      * Dont know if false can happen
@@ -41,7 +41,7 @@ class DashboardController extends \OxidEsales\Eshop\Application\Controller\Admin
     
     public function sendApiKey () {
         $apiKey = Registry::getRequest()->getRequestParameter('api_key');
-        Registry::getConfig()->saveShopConfVar('str', 'sRelevanzApiKey', $apiKey, null, 'module:releva.nz Tracking');
+        Registry::getConfig()->saveShopConfVar('str', 'sRelevanzApiKey', $apiKey, null, 'module:releva.nz-tracking');
     }
     
 }

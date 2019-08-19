@@ -10,7 +10,7 @@ $sMetadataVersion = '2.0';
  * Module information
  */
 $aModule = array(
-    'id'          => 'releva.nz Tracking',
+    'id'          => 'releva.nz-tracking',
     'title'       => array(
         'de' => 'releva.nz Tracking',
         'en' => 'releva.nz Tracking',
@@ -33,7 +33,7 @@ $aModule = array(
         \Relevanz\TrackingOxid\Model\Api::class => \Relevanz\TrackingOxid\Model\Api::class,
     ),
     'templates'   => array(
-        'main.tpl' => 'relevanz/tracking/views/admin/tpl/statistics.tpl'
+        'statistics.tpl' => 'relevanz/tracking/views/admin/tpl/statistics.tpl'
     ),
     'blocks'      => array(),
     'settings'    => array(
