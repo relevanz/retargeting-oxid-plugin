@@ -2,7 +2,7 @@
 <OX>
     <OXMENU id="NAVIGATION_ESHOPADMIN">
         <MAINMENU id="mxservice">
-            <SUBMENU id="releva.nz Dashboard" cl="relevanzstatistics" />
+            <SUBMENU id="RELEVANZ_DASHBOARD" cl="relevanzdashboard" />
         </MAINMENU>
     </OXMENU>
 </OX>

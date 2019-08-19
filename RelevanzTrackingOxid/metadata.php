@@ -24,15 +24,21 @@ $aModule = array(
     'url'         => 'https://www.releva.nz',
     'email'       => 'hello@releva.nz',
     'extend'      => array(
+        'module_config' => Relevanz\TrackingOxid\Controller\Admin\ModuleConfiguration::class,
     ),
     'controllers'       => array(
-        'relevanzstatistics' => \Relevanz\TrackingOxid\Controller\Admin\StatisticsController::class,
+        'relevanzdashboard' => \Relevanz\TrackingOxid\Controller\Admin\DashboardController::class,
     ),
-    'files'       => array(),
+    'files'       => array(
+        \Relevanz\TrackingOxid\Model\Api::class => \Relevanz\TrackingOxid\Model\Api::class,
+    ),
     'templates'   => array(
         'main.tpl' => 'relevanz/tracking/views/admin/tpl/statistics.tpl'
     ),
     'blocks'      => array(),
-    'settings'    => array(),
+    'settings'    => array(
+        array('group' => 'relevanz_config', 'name' => 'sRelevanzApiKey', 'type' => 'str', 'value' => '', ),
+        #array('group' => 'relevanz_config', 'name' => 'sRelevanzClientId', 'type' => 'str', 'value' => '', ),
+    ),
     'events'      => array(),
 );
