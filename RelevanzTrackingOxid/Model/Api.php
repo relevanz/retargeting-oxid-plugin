@@ -12,10 +12,9 @@ class Api {
     
     /**
      * @param string $apiKey
-     * @todo make frontend controller for $productExportUrl
      */
     public function getUser($apiKey = null){
-        $productExportUrl = str_replace(urlencode(':auth'), ':auth', Registry::getConfig()->getSslShopUrl().'releva.nz/products?type=csv&auth:auth');
+        $productExportUrl = str_replace(urlencode(':auth'), ':auth', Registry::getConfig()->getSslShopUrl().'?cl=relevanzproductexport&type=csv&auth:auth');
         $response = $this->_request(static::PROTOCOL."://".static::STATISTIC_URL.'/user/get', [
             'apikey' => $apiKey,
             'product-export-url' => $productExportUrl,
@@ -26,6 +25,7 @@ class Api {
                 Registry::getConfig()->saveShopConfVar('str', 'sRelevanzClientId', $clientId, null, 'module:releva.nz-tracking');
             }
         } else {
+            Registry::getConfig()->saveShopConfVar('str', 'sRelevanzClientId', '', null, 'module:releva.nz-tracking');
             throw new \Exception($response['message']);
         }
         return $response;
