@@ -12,7 +12,7 @@ class ArticleDetailsController extends ArticleDetailsController_parent {
     public function render() {
         $article = $this->getProduct();
         if (!empty($article)) {
-            Data::addFrontendJavascript('blTrackProductPage', [
+            Data::addFrontendJavascript('blTrackingEnabled', [
                 't' => 'd',
                 'action' => 'p',
                 'id' => $article->getId(),

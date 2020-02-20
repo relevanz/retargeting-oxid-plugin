@@ -18,7 +18,7 @@ class ThankYouController extends ThankYouController_parent {
                 /* @var $orderArticle \OxidEsales\Eshop\Application\Model\OrderArticle */
                 $itemIds[] = $orderArticle->oxorderarticles__oxartid->value;
             }
-            Data::addFrontendJavascript('blTrackOrderSuccessPage', [
+            Data::addFrontendJavascript('blTrackingEnabled', [
                 'orderId'   => (string)$order->getId(),
                 'amount'    => number_format($order->oxorder__oxtotalordersum->value, 2, '.', ''),
                 'eventName' => implode(',', $itemIds),

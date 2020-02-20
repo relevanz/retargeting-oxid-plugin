@@ -12,7 +12,7 @@ class ArticleListController extends ArticleListController_parent {
     public function render() {
         $category = $this->getCategoryToRender();
         if (!empty($category)) {
-            Data::addFrontendJavascript('blTrackCategoryPage', [
+            Data::addFrontendJavascript('blTrackingEnabled', [
                 't' => 'd',
                 'action' => 'c',
                 'id' => $category->getId()

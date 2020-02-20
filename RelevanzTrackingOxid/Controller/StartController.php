@@ -9,7 +9,7 @@ use Relevanz\TrackingOxid\Model\Data;
 class StartController extends StartController_parent {
     
     public function render() {
-        Data::addFrontendJavascript('blTrackFrontPage', [
+        Data::addFrontendJavascript('blTrackingEnabled', [
             't' => 'd',
             'action' => 's'
         ]);

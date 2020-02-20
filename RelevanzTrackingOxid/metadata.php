@@ -45,10 +45,7 @@ $aModule = array(
     'settings'    => array(
         array('group' => 'relevanz_settings', 'name' => 'sRelevanzApiKey', 'type' => 'str', 'value' => '', ),
         #array('group' => 'relevanz_settings', 'name' => 'sRelevanzClientId', 'type' => 'str', 'value' => '', ),
-        array('group' => 'relevanz_tracking', 'name' => 'blTrackFrontPage', 'type' => 'bool', 'value' => 'true', ),
-        array('group' => 'relevanz_tracking', 'name' => 'blTrackCategoryPage', 'type' => 'bool', 'value' => 'true', ),
-        array('group' => 'relevanz_tracking', 'name' => 'blTrackProductPage', 'type' => 'bool', 'value' => 'true', ),
-        array('group' => 'relevanz_tracking', 'name' => 'blTrackOrderSuccessPage', 'type' => 'bool', 'value' => 'true', ),
+        array('group' => 'relevanz_tracking', 'name' => 'blTrackingEnabled', 'type' => 'bool', 'value' => 'true', ),
     ),
     'events'      => array(),
 );

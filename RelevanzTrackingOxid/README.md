@@ -5,7 +5,7 @@ via composer (local repository):
         "repositories": [
             {
                 "type": "path",
-                "url": "path/to/magento-2-releva.nz/RelevanzTracking",
+                "url": "path/to/oxid-6-releva.nz/RelevanzTracking",
                 "options": {
                     "symlink": false
                 }
