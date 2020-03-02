@@ -14,4 +14,4 @@ via composer (local repository):
 
 execute in shell in root-folder of your oxid-z installation:
     $ composer require relevanz/tracking-oxid
-
+ 
