@@ -1,5 +1,5 @@
 <?php
-namespace Relevanz\TrackingOxid\Controller;
+namespace Relevanz\RetargetingOxid\Controller;
 
 use OxidEsales\Eshop\Core\Registry;
 

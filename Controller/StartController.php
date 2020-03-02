@@ -1,7 +1,7 @@
 <?php
-namespace Relevanz\TrackingOxid\Controller;
+namespace Relevanz\RetargetingOxid\Controller;
 
-use Relevanz\TrackingOxid\Model\Data;
+use Relevanz\RetargetingOxid\Model\Data;
 
 /**
  * @see \OxidEsales\Eshop\Application\Controller\StartController
@@ -9,7 +9,7 @@ use Relevanz\TrackingOxid\Model\Data;
 class StartController extends StartController_parent {
     
     public function render() {
-        Data::addFrontendJavascript('blTrackingEnabled', [
+        Data::addFrontendJavascript('blRetargetingEnabled', [
             't' => 'd',
             'action' => 's'
         ]);

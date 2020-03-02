@@ -1,8 +1,8 @@
 <?php
-namespace Relevanz\TrackingOxid\Controller\Admin;
+namespace Relevanz\RetargetingOxid\Controller\Admin;
 
 use OxidEsales\Eshop\Core\Registry;
-use Relevanz\TrackingOxid\Model\Api;
+use Relevanz\RetargetingOxid\Model\Api;
 
 class DashboardController extends \OxidEsales\Eshop\Application\Controller\Admin\AdminDetailsController
 {
@@ -41,7 +41,7 @@ class DashboardController extends \OxidEsales\Eshop\Application\Controller\Admin
     
     public function sendApiKey () {
         $apiKey = Registry::getRequest()->getRequestParameter('api_key');
-        Registry::getConfig()->saveShopConfVar('str', 'sRelevanzApiKey', $apiKey, null, 'module:releva.nz-tracking');
+        Registry::getConfig()->saveShopConfVar('str', 'sRelevanzApiKey', $apiKey, null, 'module:releva.nz-retargeting');
     }
     
 }

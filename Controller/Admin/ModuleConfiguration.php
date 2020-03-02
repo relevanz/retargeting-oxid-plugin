@@ -1,8 +1,8 @@
 <?php
-namespace Relevanz\TrackingOxid\Controller\Admin;
+namespace Relevanz\RetargetingOxid\Controller\Admin;
 
 use OxidEsales\Eshop\Core\Registry;
-use Relevanz\TrackingOxid\Model\Api;
+use Relevanz\RetargetingOxid\Model\Api;
 use OxidEsales\Eshop\Core\Exception\StandardException;
 
 /**
@@ -13,7 +13,7 @@ class ModuleConfiguration extends ModuleConfiguration_parent {
     public function saveConfVars()
     {
         $sModuleId = $this->getEditObjectId();
-        if ($sModuleId === 'releva.nz-tracking') {
+        if ($sModuleId === 'releva.nz-retargeting') {
             $confStrs = $this->getConfig()->getRequestParameter('confstrs');
             try {
                 Registry::get(Api::class)->getUser($confStrs['sRelevanzApiKey']);

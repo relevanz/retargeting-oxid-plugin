@@ -1,5 +1,5 @@
 <?php
-namespace Relevanz\TrackingOxid\Model;
+namespace Relevanz\RetargetingOxid\Model;
 
 use OxidEsales\Eshop\Core\Registry;
 
@@ -22,10 +22,10 @@ class Api {
         if ($response['status'] === 'success') {
             $result = $response['result'];
             if(isset($result['user_id']) && ($clientId = $result['user_id'])) {
-                Registry::getConfig()->saveShopConfVar('str', 'sRelevanzClientId', $clientId, null, 'module:releva.nz-tracking');
+                Registry::getConfig()->saveShopConfVar('str', 'sRelevanzClientId', $clientId, null, 'module:releva.nz-retargeting');
             }
         } else {
-            Registry::getConfig()->saveShopConfVar('str', 'sRelevanzClientId', '', null, 'module:releva.nz-tracking');
+            Registry::getConfig()->saveShopConfVar('str', 'sRelevanzClientId', '', null, 'module:releva.nz-retargeting');
             throw new \Exception($response['message']);
         }
         return $response;

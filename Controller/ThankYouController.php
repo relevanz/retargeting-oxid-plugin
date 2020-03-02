@@ -1,8 +1,8 @@
 <?php
 
-namespace Relevanz\TrackingOxid\Controller;
+namespace Relevanz\RetargetingOxid\Controller;
 
-use Relevanz\TrackingOxid\Model\Data;
+use Relevanz\RetargetingOxid\Model\Data;
 
 /**
  * @see \OxidEsales\Eshop\Application\Controller\ThankYouController
@@ -18,7 +18,7 @@ class ThankYouController extends ThankYouController_parent {
                 /* @var $orderArticle \OxidEsales\Eshop\Application\Model\OrderArticle */
                 $itemIds[] = $orderArticle->oxorderarticles__oxartid->value;
             }
-            Data::addFrontendJavascript('blTrackingEnabled', [
+            Data::addFrontendJavascript('blRetargetingEnabled', [
                 'orderId'   => (string)$order->getId(),
                 'amount'    => number_format($order->oxorder__oxtotalordersum->value, 2, '.', ''),
                 'eventName' => implode(',', $itemIds),
