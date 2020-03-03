@@ -1,6 +1,6 @@
 ## Features
 
-### Dynamic Remarketing With relva.nz: We Convert Visitors to Buyers
+### Dynamic Retargeting With relva.nz: We Convert Visitors to Buyers
 
 The releva.nz plugin for OXID converts visitors into buyers, even when they already left your webshop. Via dynamic retargeting, potential buyers will be targeted with personalized online banners on external websites. Releva.nz takes care of all set-up steps: From pixelating your webshop over automatically designing your product-based ads to optimizing campaigns with Artificial Intelligence. With just a few clicks, you can increase the conversion rate of your webshop until up to 12 percent without any programming or design skills.
 

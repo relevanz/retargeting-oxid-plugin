@@ -14,7 +14,7 @@ $aModule = array(
     ),
     'description' => array(
         'de' => '
-            <h3>Dynamisches Remarketing mit releva.nz: Wir machen Besucher zu Käufern.</h3>
+            <h3>Dynamisches Retargeting mit releva.nz: Wir machen Besucher zu Käufern.</h3>
             <p>Mit der releva.nz Schnittstelle für Webshops machst Du Besucher zu Käufern, auch wenn sie deinen Webshop bereits verlassen haben. Über dynamisches Retargeting werden Kaufinteressenten gezielt auf externen Websites mit personalisierten Online-Bannern angesprochen. Dabei übernimmt releva.nz alle Schritte der Einrichtung: Von der Verpixelung deines Webshops über die vollautomatisierte Gestaltung deiner produktbezogenen Ads bis hin zur Kampagnen-Optimierung durch Künstliche Intelligenz. Steigere mit wenigen Handgriffen und ganz ohne Programmier- oder Design-Kenntnisse die Conversion-Rate deines Webshops auf bis zu 12 Prozent.</p>
             <ul>
                 <li><strong>Automatische Erstellung dynamischer Werbebanner:</strong> Du musst deine Display-Anzeigen nicht selbst gestalten - releva.nz generiert automatisch auf Basis deiner Shop-Produkte ansprechende Ads.</li>
@@ -27,7 +27,7 @@ $aModule = array(
             </ul>
         ',
         'en' => '
-            <h3>Dynamic Remarketing With relva.nz: We Convert Visitors to Buyers</h3>
+            <h3>Dynamic Retargeting With relva.nz: We Convert Visitors to Buyers</h3>
             <p>The releva.nz plugin for OXID converts visitors into buyers, even when they already left your webshop. Via dynamic retargeting, potential buyers will be targeted with personalized online banners on external websites. Releva.nz takes care of all set-up steps: From pixelating your webshop over automatically designing your product-based ads to optimizing campaigns with Artificial Intelligence. With just a few clicks, you can increase the conversion rate of your webshop until up to 12 percent without any programming or design skills.</p>
             <ul>
                 <li><strong>Automated creation of dynamic ad banners:</strong> You don’t have to design your display ads by yourself - releva.nz generates appealing ads automatically based on your shop products.</li>
