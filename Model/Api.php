@@ -14,7 +14,7 @@ class Api {
      * @param string $apiKey
      */
     public function getUser($apiKey = null){
-        $productExportUrl = str_replace(urlencode(':auth'), ':auth', Registry::getConfig()->getSslShopUrl().'?cl=relevanzproductexport&type=csv&auth:auth');
+        $productExportUrl = str_replace(urlencode(':auth'), ':auth', Registry::getConfig()->getSslShopUrl().'?cl=relevanzproductexport&type=csv&auth:auth'). (Registry::getRequest()->getRequestParameter('shp') ? '&shp='.Registry::getRequest()->getRequestParameter('shp') : '');
         $response = $this->_request(static::PROTOCOL."://".static::STATISTIC_URL.'/user/get', [
             'apikey' => $apiKey,
             'product-export-url' => $productExportUrl,
