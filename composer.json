@@ -2,7 +2,7 @@
     "name": "relevanz/retargeting-oxid-plugin",
     "description": "releva.nz Retargeting for oxid-6",
     "require": {
-        "php": "~5.5.0|~5.6.0|~7.1.3|~7.2.0"
+        "php": "^5.6|^7"
     },
     "type": "oxideshop-module",
     "extra": {
