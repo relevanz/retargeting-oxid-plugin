@@ -2,7 +2,8 @@
     "name": "relevanz/retargeting-oxid-plugin",
     "description": "releva.nz Retargeting for oxid-6",
     "require": {
-        "php": "^5.6|^7"
+        "php": "^5.6|^7",
+        "relevanz/retargeting-base-lib": "*"
     },
     "type": "oxideshop-module",
     "extra": {
@@ -11,9 +12,9 @@
             "blacklist-filter": [
                 "composer.json",
                 "README.md",
-                "Controller/*",
-                "Controller/*/*",
-                "Model/*"
+                "Controller/**/*",
+                "Internal/**/*",
+                "Model/**/*"
             ]
         }
     },
@@ -22,7 +23,7 @@
             "Relevanz\\RetargetingOxid\\": "./"
         }
     },
-    "version": "1.0.2",
+    "version": "1.0.3",
     "license": [
         "MIT"
     ]

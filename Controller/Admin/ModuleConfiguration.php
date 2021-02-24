@@ -2,7 +2,8 @@
 namespace Relevanz\RetargetingOxid\Controller\Admin;
 
 use OxidEsales\Eshop\Core\Registry;
-use Relevanz\RetargetingOxid\Model\Api;
+use Releva\Retargeting\Base\RelevanzApi;
+use Relevanz\RetargetingOxid\Internal\ShopInfo;
 use OxidEsales\Eshop\Core\Exception\StandardException;
 
 /**
@@ -16,8 +17,14 @@ class ModuleConfiguration extends ModuleConfiguration_parent {
         if ($sModuleId === 'releva.nz-retargeting') {
             $confStrs = $this->getConfig()->getRequestParameter('confstrs');
             try {
-                Registry::get(Api::class)->getUser($confStrs['sRelevanzApiKey']);
+                $relevanzApi = Registry::get(RelevanzApi::class);
+                $shopInfo = Registry::get(ShopInfo::class);
+                $userId = (int) RelevanzApi::verifyApiKey($confStrs['sRelevanzApiKey'], [
+                    'callback-url' => $shopInfo->getUrlCallback(),
+                ])->getUserId();
+                Registry::getConfig()->saveShopConfVar('str', 'sRelevanzClientId', $userId, null, 'module:releva.nz-retargeting');
             } catch (\Exception $ex) {
+                Registry::getConfig()->saveShopConfVar('str', 'sRelevanzClientId', '', null, 'module:releva.nz-retargeting');
                 Registry::getUtilsView()->addErrorToDisplay(new StandardException($ex->getMessage()));
             }
         }

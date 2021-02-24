@@ -2,7 +2,7 @@
 namespace Relevanz\RetargetingOxid\Controller\Admin;
 
 use OxidEsales\Eshop\Core\Registry;
-use Relevanz\RetargetingOxid\Model\Api;
+use Releva\Retargeting\Base\RelevanzApi;
 
 class DashboardController extends \OxidEsales\Eshop\Application\Controller\Admin\AdminDetailsController
 {
@@ -22,10 +22,9 @@ class DashboardController extends \OxidEsales\Eshop\Application\Controller\Admin
     public function validateApiKey() {
         $apiKey = $this->getApiKey();
         if ($apiKey) {
-            try {;
-                if(Registry::get(Api::class)->getUser($apiKey)['status'] === 'success'){
-                    return true;
-                }
+            try {
+                Registry::get(RelevanzApi::class)->verifyApiKey($apiKey); //throws Ecxeption
+                return true;
             } catch (\Exception $exception) {
             }
         }

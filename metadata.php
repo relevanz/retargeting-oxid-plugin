@@ -2,7 +2,7 @@
 /**
  * Metadata version
  */
-$sMetadataVersion = '2.0';
+$sMetadataVersion = '2.1';
 /**
  * Module information
  */
@@ -46,27 +46,29 @@ $aModule = array(
     'email'       => 'hello@releva.nz',
     'extend'      => array(
         'module_config' => \Relevanz\RetargetingOxid\Controller\Admin\ModuleConfiguration::class,
-        'start' => \Relevanz\RetargetingOxid\Controller\StartController::class,
-        'alist' => \Relevanz\RetargetingOxid\Controller\ArticleListController::class,
-        'details' => \Relevanz\RetargetingOxid\Controller\ArticleDetailsController::class,
-        'thankyou' => \Relevanz\RetargetingOxid\Controller\ThankYouController::class,
     ),
     'controllers'       => array(
         'relevanzdashboard' => \Relevanz\RetargetingOxid\Controller\Admin\DashboardController::class,
-        'relevanzproductexport' => \Relevanz\RetargetingOxid\Controller\RelevanzProductExport::class,
-    ),
-    'files'       => array(
-        \Relevanz\RetargetingOxid\Model\Api::class => \RelevaRetargetingOxidxid\Model\Api::class,
-        \Relevanz\RetargetingOxid\Model\Data::class => \RelevaRetargetingOxidxid\Model\Data::class,
+        'relevanzcontroller' => \Relevanz\RetargetingOxid\Controller\RelevanzController::class,
     ),
     'templates'   => array(
         'statistics.tpl' => 'relevanz/retargeting/views/admin/tpl/statistics.tpl'
     ),
-    'blocks'      => array(),
+    'blocks'      => array(
+        [
+            'template' => 'layout/footer.tpl',
+            'block' => 'footer_main',
+            'file' => '/views/frontend/layout/footer.tpl'
+        ],
+    ),
+    'smartyPluginDirectories' => [
+        'Smarty/Plugin',
+    ],
     'settings'    => array(
         array('group' => 'relevanz_settings', 'name' => 'sRelevanzApiKey', 'type' => 'str', 'value' => '', ),
         #array('group' => 'relevanz_settings', 'name' => 'sRelevanzClientId', 'type' => 'str', 'value' => '', ),
-        array('group' => 'relevanz_retargeting', 'name' => 'blRetargetingEnabled', 'type' => 'bool', 'value' => 'true', ),
+        array('group' => 'relevanz_settings', 'name' => 'sAlternativeCookieCheck', 'type' => 'str', 'value' => 'var relevanzRetargetingForcePixel = true;', ),
+        array('group' => 'relevanz_retargeting', 'name' => 'blRetargetingEnabled', 'type' => 'bool', 'value' => true, ),
     ),
     'events'      => array(),
 );
