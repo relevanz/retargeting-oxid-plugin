@@ -41,7 +41,7 @@ $aModule = array(
         ',
     ),
     'thumbnail'   => 'out/pictures/relevanz-logo.png',
-    'version'     => '1.0.0',
+    'version'     => '1.0.3',
     'url'         => 'https://www.releva.nz',
     'email'       => 'hello@releva.nz',
     'extend'      => array(
