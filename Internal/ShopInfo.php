@@ -22,7 +22,7 @@ class ShopInfo extends AbstractShopInfo {
     
     public static function getUrlCallback() {
         return
-            Registry::getConfig()->getSslShopUrl().'?cl=relevanzcontroller&fnc=callback&auth:auth'.(
+            Registry::getConfig()->getSslShopUrl().'?cl=relevanzcontroller&fnc=callback'.(
                 Registry::getRequest()->getRequestParameter('shp')
                 ? '&shp='.Registry::getRequest()->getRequestParameter('shp')
                 : ''
@@ -32,7 +32,7 @@ class ShopInfo extends AbstractShopInfo {
     
     public static function getUrlProductExport() {
         return
-            Registry::getConfig()->getSslShopUrl().'?cl=relevanzcontroller&fnc=productexport&auth:auth'.(
+            Registry::getConfig()->getSslShopUrl().'?cl=relevanzcontroller&fnc=productexport'.(
                 Registry::getRequest()->getRequestParameter('shp')
                 ? '&shp='.Registry::getRequest()->getRequestParameter('shp')
                 : ''

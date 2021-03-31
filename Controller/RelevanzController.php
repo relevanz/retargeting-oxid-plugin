@@ -49,7 +49,7 @@ class RelevanzController extends \OxidEsales\Eshop\Application\Controller\Fronte
     
     public function productExport() {
         $this->checkAuth();
-        $exporter = Registry::getRequest()->getRequestParameter('type') === 'json' ? new ProductJsonExporter() : new ProductCsvExporter();
+        $exporter = Registry::getRequest()->getRequestParameter('format') === 'json' ? new ProductJsonExporter() : new ProductCsvExporter();
         /* @var $articleList \OxidEsales\Eshop\Application\Model\ArticleList */
         $articleList = oxNew(\OxidEsales\Eshop\Application\Model\ArticleList::class);
         $page = (int) Registry::getRequest()->getRequestParameter('page') < 1 ? null : (int) Registry::getRequest()->getRequestParameter('page') - 1;
@@ -69,7 +69,7 @@ class RelevanzController extends \OxidEsales\Eshop\Application\Controller\Fronte
             $exporter->addItem(
                 new ProductExportItem(
                     (string) $article->getId(),
-                    (array) $article->getCategory()->getId(),//@todo ids
+                    $article->getCategory() === null ? [] : (array) $article->getCategory()->getId(),//@todo ids
                     (string) $article->oxarticles__oxtitle->value,
                     (string) $article->oxarticles__oxshortdesc->value,
                     (string) $article->getLongDesc(),
