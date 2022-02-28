@@ -20,7 +20,7 @@ function smarty_function_get_relevanz_tracking_url($params, Smarty &$smarty)
                     foreach ($oOrder->getOrderArticles() as $oOrderArticle) {
                         $productIds[] = $oOrderArticle->oxorderarticles__oxartid->value;
                     }
-                    $url = \Releva\Retargeting\Base\RelevanzApi::RELEVANZ_CONV_URL.'?cid='.$cId.'&orderId='.$oOrder->getId().'&amount='.($oOrder->oxorder__oxtotalbrutsum->value).'&products='.implode(',', $productIds);
+                    $url = \Releva\Retargeting\Base\RelevanzApi::RELEVANZ_CONV_URL.'?cid='.$cId.'&orderId='.$oOrder->oxorder__oxordernr->value.'&amount='.($oOrder->oxorder__oxtotalbrutsum->value).'&products='.implode(',', $productIds);
                     break;
                 }
                 case 'alist': {
